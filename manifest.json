@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Turtle Scrollbar Extension",
+    "description": "This extension slows down the scroll bars",
+    "version": "1.0",
+    
+    "browser_action": {
+        "default_icon": "turtle.png",
+        "default_popup": "popup.html"
+    },
+    
+    "permissions": [
+        "activeTab",
+        "storage"
+    ]
+}
