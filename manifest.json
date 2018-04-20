@@ -1,17 +1,39 @@
 {
     "manifest_version": 2,
     
-    "name": "Turtle Scrollbar Extension",
-    "description": "This extension slows down the scroll bars",
+    "name": "Revert Layout For Youtube",
+    "description": "This extension reverts the layout of youtube pages",
     "version": "1.0",
     
     "browser_action": {
         "default_icon": "turtle.png",
         "default_popup": "popup.html"
+        //"scripts": ["edit_url.js"]
+    },
+    
+    //"content_scripts": [
+        //{
+            //"run_at": "document_start",
+            //"matches": ["http://*/*", "https://*/*"],
+            //"matches": ["http://*youtube.com/*", "https://*youtube.com/*"],
+            //"js": ["edit_url.js"]
+            //"persistent": false
+        //}
+    //],
+    
+    "background": {
+        "scripts": ["edit_url.js"],
+        "persistent": true
     },
     
     "permissions": [
-        "activeTab",
-        "storage"
+        //"activeTab",
+        //"tabs",
+        "webRequest",
+        //"*://*.youtube.com",
+        "storage",
+        //"<all_urls>"
+        "*://youtube.com/*",
+        "*://www.youtube.com/*"
     ]
 }
