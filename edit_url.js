@@ -27,7 +27,10 @@ var callback = function(details) {
         url.includes(".js") ||
         url.includes("youtubei") ||
         url.includes("yts") ||
-        url.includes("feed_ajax");
+        url.includes("feed_ajax") ||
+        url.includes("annotations_invideo") ||
+        url.includes("get_midroll_info") ||
+        url.includes("get_endscreen");
     //console.log(url.includes("feed_ajax"));
     //console.log(tabId);
     if (!support && !url.includes("disable_polymer")) {
